@@ -1,18 +1,18 @@
 # Remote Screen 2 - Simple HTTP Framebuffer Server
 
-A lightweight Python HTTP server that exposes the framebuffer as PNG snapshots and accepts touch input.
+A lightweight Python HTTP server that exposes the framebuffer as JPEG snapshots and accepts touch input.
 
 ## Features
 
-- Reads from `/dev/fb0` and converts to PNG
+- Reads from `/dev/fb0` and converts to JPEG
 - Simple web viewer that refreshes at ~2Hz
 - Touch input support via `/dev/input/event0`
 
 ## Endpoints
 
 - `GET /` - HTML viewer with auto-refresh and touch support
-- `GET /snapshot` - Current framebuffer as PNG image
-- `GET /stream` - PNG frames pushed whenever the screen changes
+- `GET /snapshot` - Current framebuffer as JPEG image
+- `GET /stream` - JPEG frames pushed whenever the screen changes
 - `POST /touch?x=&y=` - Send touch event at coordinates
 
 ## Configuration
